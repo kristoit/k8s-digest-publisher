@@ -1,0 +1,666 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kristoit.github.io/k8s-digest-publisher/en/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../digests/2026-08-03-145151/ru/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>English Home - K8s Digest</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra-v14.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#state-as-of" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="K8s Digest" class="md-header__button md-logo" aria-label="K8s Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            K8s Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              English Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="K8s Digest" class="md-nav__button md-logo" aria-label="K8s Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    K8s Digest
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Russian Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    English Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    English Home
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#state-as-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      State as of
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State as of">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overall-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overall status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      By environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-findings-trend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical findings trend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digest-archive-last-7-days" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digest archive (last 7 days)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Digests
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Digests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2026-08-03-145151
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            2026-08-03-145151
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digests/2026-08-03-145151/ru/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RU
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digests/2026-08-03-145151/en/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#state-as-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      State as of
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State as of">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overall-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overall status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      By environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-findings-trend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical findings trend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digest-archive-last-7-days" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digest archive (last 7 days)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div class="digest-hero" markdown="1">
+  <img src="../assets/cover-2026-08-03-145151.jpg" alt="cover" aria-hidden="true">
+  <div class="digest-hero-content">
+    <h1>K8s Digest</h1>
+    <p class="hero-meta">Digest from 2026-08-03 14:51:51</p>
+  </div>
+</div>
+
+<h2 date="date" id="state-as-of">State as of</h2>
+<h3 id="overall-status">Overall status</h3>
+<div class="env-grid metrics-grid">
+
+  <div class="env-card">
+    <div class="env-metric"><strong class="metric-blockers">16</strong></div>
+    <div class="env-metric-label">Total critical</div>
+  </div>
+
+  <div class="env-card">
+    <div class="env-metric"><strong class="metric-warnings">6</strong></div>
+    <div class="env-metric-label">Total warnings</div>
+  </div>
+
+  <div class="env-card">
+    <div class="env-metric"><strong class="metric-info">7</strong></div>
+    <div class="env-metric-label">Total notes</div>
+  </div>
+
+  <div class="env-card">
+    <div class="env-metric"><strong>8</strong></div>
+    <div class="env-metric-label">Files scanned</div>
+  </div>
+
+  <div class="env-card">
+    <div class="env-metric"><strong>3</strong></div>
+    <div class="env-metric-label">Environments</div>
+  </div>
+
+</div>
+
+<h3 id="by-environment">By environment</h3>
+<div class="env-grid">
+
+  <div class="env-card">
+    <div class="env-name">PROD</div>
+    <div class="env-metric"><strong class="metric-blockers">12</strong> critical</div>
+    <div class="env-metric"><strong class="metric-warnings">4</strong> warnings</div>
+    <div class="env-metric"><strong class="metric-info">6</strong> notes</div>
+  </div>
+
+  <div class="env-card">
+    <div class="env-name">STAGE</div>
+    <div class="env-metric"><strong class="metric-blockers">1</strong> critical</div>
+    <div class="env-metric"><strong class="metric-warnings">1</strong> warnings</div>
+    <div class="env-metric"><strong class="metric-info">1</strong> notes</div>
+  </div>
+
+  <div class="env-card">
+    <div class="env-name">TEST</div>
+    <div class="env-metric"><strong class="metric-blockers">3</strong> critical</div>
+    <div class="env-metric"><strong class="metric-warnings">1</strong> warnings</div>
+    <div class="env-metric"><strong class="metric-info">0</strong> notes</div>
+  </div>
+
+</div>
+
+<div class="admonition info">
+<p class="admonition-title">Latest digest</p>
+<p><a href="https://kristoit.github.io/k8s-digest-publisher/digests/2026-08-03-145151/en/">Digest from 2026-08-03 14:51:51</a></p>
+</div>
+<h2 id="critical-findings-trend">Critical findings trend</h2>
+<div class="env-grid trend-grid">
+  <div class="env-card trend-card">
+    <div class="env-name">Total critical</div>
+    <div class="trend-value trend-badge-high">16</div>
+    <div class="trend-sparkline"><span class="trend-dot trend-same" title="16"></span></div>
+  </div>
+  <div class="env-card trend-card">
+    <div class="env-name">PROD</div>
+    <div class="trend-value trend-badge-high">12</div>
+    <div class="trend-sparkline"><span class="trend-dot trend-same" title="12"></span></div>
+  </div>
+  <div class="env-card trend-card">
+    <div class="env-name">STAGE</div>
+    <div class="trend-value trend-badge-low">1</div>
+    <div class="trend-sparkline"><span class="trend-dot trend-same" title="1"></span></div>
+  </div>
+  <div class="env-card trend-card">
+    <div class="env-name">TEST</div>
+    <div class="trend-value trend-badge-med">3</div>
+    <div class="trend-sparkline"><span class="trend-dot trend-same" title="3"></span></div>
+  </div>
+</div>
+
+<div class="admonition warning">
+<p class="admonition-title">Anti-pattern of the week</p>
+<p><strong>replicas &gt; 1</strong> (<code>replicas-1</code>)</p>
+<p>This issue frequently appears in scanned manifests and directly affects reliability or security.</p>
+<p><strong>How to fix:</strong> Set <code>replicas &gt;= 2</code> for production, or add an annotation justifying <code>replicas: 1</code>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Call to action</p>
+<p>Which risk from today's scan will take the first place in your sprint? Let's set priorities.</p>
+</div>
+<h2 id="digest-archive-last-7-days">Digest archive (last 7 days)</h2>
+<div class="env-grid archive-grid">
+
+  <div class="env-card archive-card">
+    <div class="env-name">2026-08-03</div>
+    <div class="env-metric"><strong class="metric-blockers">16</strong> Critical</div>
+    <div class="env-metric"><strong class="metric-warnings">6</strong> Warnings</div>
+    <div class="env-metric"><strong class="metric-info">7</strong> Notes</div>
+    <div class="env-metric"><a href="https://kristoit.github.io/k8s-digest-publisher/digests/2026-08-03-145151/en/">Open →</a></div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
