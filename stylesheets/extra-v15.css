@@ -1,0 +1,266 @@
+/* K8s digest extra styles */
+
+.md-typeset .mermaid-chart-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.md-typeset .mermaid-chart-wrapper .mermaid {
+  max-width: 480px;
+  width: 100%;
+}
+
+.digest-hero {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  min-height: 220px;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+}
+
+.digest-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+}
+
+.digest-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.digest-hero-content h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.digest-hero-content p {
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+}
+
+.digest-hero-content .hero-meta {
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+.env-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.metrics-grid {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.env-card {
+  border-radius: 0.4rem;
+  border: 1px solid var(--md-default-fg-color--lightest, rgba(0,0,0,0.1));
+  padding: 1rem;
+  text-align: center;
+  background: var(--md-default-bg-color, #fff);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.md-typeset .env-card .env-name {
+  font-weight: 700;
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest, rgba(0,0,0,0.1));
+}
+
+.md-typeset .env-card .env-metric {
+  margin: 0.25rem 0;
+  font-size: 0.7rem !important;
+}
+
+.md-typeset .env-card .env-metric strong {
+  font-size: 0.85rem !important;
+  margin-right: 0.2rem;
+}
+
+.md-typeset .env-card .env-metric-label {
+  font-size: 0.65rem !important;
+  opacity: 0.8;
+  margin-top: 0.2rem;
+}
+
+.md-typeset .metrics-grid .env-card .env-metric {
+  font-size: 0.7rem !important;
+}
+
+.md-typeset .metrics-grid .env-card .env-metric strong {
+  font-size: 0.85rem !important;
+}
+
+.md-typeset .metrics-grid .env-card .env-metric-label {
+  font-size: 0.65rem !important;
+}
+
+.metric-blockers {
+  color: #c62828;
+}
+
+.metric-warnings {
+  color: #f57f17;
+}
+
+.metric-info {
+  color: #1565c0;
+}
+
+.severity-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.severity-badge.blocker {
+  background: #ffebee;
+  color: #b71c1c;
+}
+
+.severity-badge.warning {
+  background: #fff8e1;
+  color: #f57f17;
+}
+
+.severity-badge.info {
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+
+.md-typeset .finding-list > li {
+  margin-bottom: 0.6rem;
+}
+
+.md-typeset .finding-list code {
+  font-size: 0.85em;
+}
+
+.md-typeset h2 {
+  margin-top: 2.5rem;
+}
+
+/* Archive cards on homepage */
+.md-typeset .archive-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.md-typeset .archive-card .env-name {
+  font-size: 1rem !important;
+}
+
+.md-typeset .archive-card .env-metric {
+  font-size: 0.75rem !important;
+}
+
+/* Time under the date in archive cards: several digests a day share one date,
+   so the card is unreadable without it. Kept inside .env-name so the card's
+   bottom border stays under both lines. */
+.md-typeset .archive-card .env-name .archive-time {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.75rem !important;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  opacity: 0.7;
+}
+
+
+.md-typeset .archive-card .env-metric a {
+  font-weight: 700;
+}
+
+/* Trend sparkline cards */
+.md-typeset .trend-grid {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.md-typeset .trend-card .env-name {
+  font-size: 0.8rem !important;
+}
+
+.md-typeset .trend-card .trend-value {
+  font-size: 0.85rem !important;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+
+.md-typeset .trend-card .trend-sparkline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  height: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+.md-typeset .trend-card .trend-dot {
+  width: 6px;
+  height: 6px;
+}
+
+.trend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.trend-up {
+  background: #c62828;
+}
+
+.trend-down {
+  background: #2e7d32;
+}
+
+.trend-same {
+  background: #90a4ae;
+}
+
+.trend-flat {
+  color: #90a4ae;
+  font-size: 0.85rem;
+}
+
+.trend-badge-high {
+  color: #c62828;
+}
+
+.trend-badge-med {
+  color: #f57f17;
+}
+
+.trend-badge-low {
+  color: #f9a825;
+}
+
+.trend-badge-zero {
+  color: #2e7d32;
+}
