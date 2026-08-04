@@ -391,17 +391,9 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">Краткое резюме</p>
-<p>Всего критичных: 16 (+0 к вчера, +0.0%).</p>
+<p>Всего критичных: 12 (-4 к вчера, -25.0%).</p>
 <ul>
-<li>
-<p>prod: 12 (+0, +0.0%).</p>
-</li>
-<li>
-<p>stage: 1 (+0, +0.0%).</p>
-</li>
-<li>
-<p>test: 3 (+0, +0.0%).</p>
-</li>
+<li>prod: 12 (+0, +0.0%).</li>
 </ul>
 </div>
 <div class="env-grid">
@@ -412,34 +404,16 @@
 <div class="env-metric"><strong class="metric-warnings">4</strong> предупреждений</div>
 <div class="env-metric"><strong class="metric-info">6</strong> замечаний</div>
 </div>
-<div class="env-card">
-<div class="env-name">STAGE</div>
-<div class="env-metric"><strong>3</strong> файлов</div>
-<div class="env-metric"><strong class="metric-blockers">1</strong> критичных</div>
-<div class="env-metric"><strong class="metric-warnings">1</strong> предупреждений</div>
-<div class="env-metric"><strong class="metric-info">1</strong> замечаний</div>
-</div>
-<div class="env-card">
-<div class="env-name">TEST</div>
-<div class="env-metric"><strong>3</strong> файлов</div>
-<div class="env-metric"><strong class="metric-blockers">3</strong> критичных</div>
-<div class="env-metric"><strong class="metric-warnings">1</strong> предупреждений</div>
-<div class="env-metric"><strong class="metric-info">0</strong> замечаний</div>
-</div>
 </div>
 <div class="mermaid-chart-wrapper" markdown="1">
 <pre class="mermaid"><code>pie title Критичных по окружениям
-    "prod" : 12
-    "stage" : 1
-    "test" : 3</code></pre>
+    "prod" : 12</code></pre>
 </div>
 <h2 id="_1">Менеджерский взгляд</h2>
 <div class="admonition warning">
 <p class="admonition-title">Ключевые риски</p>
 <ul>
 <li><strong>prod:</strong> <code>capabilities.drop</code> не включает ALL — 10 критичных находок.</li>
-<li><strong>stage:</strong> <code>type: LoadBalancer</code> без обоснования — 1 критичных находок.</li>
-<li><strong>test:</strong> Устаревший <code>apiVersion: networking.k8s.io/v1beta1</code> — 3 критичных находок.</li>
 </ul>
 </div>
 <div class="admonition tip">
@@ -460,20 +434,6 @@
 <li><code>deployment.yaml:6</code> — <code>[replicas-1]</code> <code>replicas: 1</code> без обоснования<br/><em>исправление:</em> Для production задайте <code>replicas &gt;= 2</code> или добавьте аннотацию с обоснованием одной реплики.</li>
 <li><code>deployment.yaml:14-24</code> — <code>[resources]</code> Не заданы <code>resources</code><br/><em>исправление:</em> Добавьте <code>resources.requests</code> и <code>resources.limits</code> для CPU и memory.</li>
 <li><code>deployment.yaml:14-24</code> — <code>[run-as-non-root]</code> Контейнер может запускаться от root<br/><em>исправление:</em> Задайте <code>securityContext.runAsNonRoot: true</code> и <code>runAsUser</code> &gt;= 10000.</li>
-</ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">STAGE</p>
-<ul>
-<li><code>bad-service.yaml:6</code> — <code>[service-loadbalancer]</code> <code>type: LoadBalancer</code> без обоснования<br/><em>исправление:</em> Используйте <code>type: ClusterIP</code> и направляйте трафик через Ingress с TLS.</li>
-</ul>
-</div>
-<div class="admonition info">
-<p class="admonition-title">TEST</p>
-<ul>
-<li><code>bad-ingress.yaml:1</code> — <code>[ingress-api-version]</code> Устаревший <code>apiVersion: networking.k8s.io/v1beta1</code><br/><em>исправление:</em> Используйте <code>networking.k8s.io/v1</code> и новый синтаксис backend <code>service</code>.</li>
-<li><code>bad-ingress.yaml:5-13</code> — <code>[ingress-tls]</code> Не настроен TLS<br/><em>исправление:</em> Добавьте <code>spec.tls</code> и аннотацию <code>cert-manager.io/cluster-issuer</code>.</li>
-<li><code>secret.yaml:5-7</code> — <code>[secret-plaintext]</code> Учётные данные в открытом виде в манифесте<br/><em>исправление:</em> Используйте внешнее управление секретами (Vault, Sealed Secrets, External Secrets Operator или SOPS).</li>
 </ul>
 </div>
 <div class="admonition tip">
